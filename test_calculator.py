@@ -52,28 +52,27 @@ class TestCalculator(unittest.TestCase):
     ##########################
     def test_hypotenuse(self):
         with self.assertRaises(ValueError):
-            hypotenuse(0,0)
+            hypotenuse(0, 0)
 
-    def test_multiply:
-        assert 1*2 == 2
-        assert 5*4 == 20
+    def test_multiply(self):
+        self.assertEqual(mul(1, 2), 2)
+        self.assertEqual(mul(5, 4), 20)
 
-    def test_divide:
-        assert -10/2 == -5
-        assert 15/3 == 3
+    def test_divide(self):
+        self.assertEqual(div(2, -10), -5)
+        self.assertEqual(div(3, 15), 5)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
-            logarithm(0, "hi")
-        assert hypotenuse(3,4) == 5
-        assert hypotenuse(0,0) == 0
+            log(0, "hi")
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(0, 0), 0)
 
     def test_sqrt(self):
         with self.assertRaises(ValueError):
             square_root("abc")
-        assert spare_root(9) == 3
-        assert spare_root(16) == 4
-
+        self.assertEqual(square_root(9), 3)
+        self.assertEqual(square_root(16), 4)
 
 # Do not touch this
 if __name__ == "__main__":
