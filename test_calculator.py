@@ -1,10 +1,12 @@
 # https://github.com/elizapikulinski/lab11-ep-bd.git
 # Partner 1: Eliza Pikulinski
 # Partner 2: Briana DeStoppelaire
-import pytest
-from calculator import add, sub, div, log
+
+import unittest
+from calculator import *
 
 class TestCalculator(unittest.TestCase):
+<<<<<<< HEAD
 #### Partner 2
     def test_add(self):
         assert add(2, 3) == 5
@@ -24,6 +26,29 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_base(self):
         with pytest.raises(ValueError):
             log(1, 10)  # base cannot be 1
+=======
+
+    #### Partner 2
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-1, 1), 0)
+
+    def test_subtract(self):
+        self.assertEqual(sub(5, 3), 2)
+        self.assertEqual(sub(0, 4), -4)
+
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 5)
+
+    def test_logarithm(self):
+        self.assertEqual(log(2, 8), 3)
+
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            log(1, 10)
+
+>>>>>>> b765af7a0eefa5410b77e067c34c62a3f3a90165
 
 
 
@@ -40,6 +65,7 @@ class TestCalculator(unittest.TestCase):
         # def test_hypotenuse(self): # 3 assertions
         #     fill in code
 
+<<<<<<< HEAD
         # def test_sqrt(self): # 3 assertions
         #     # Test for invalid argument, example:
         #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
@@ -47,13 +73,44 @@ class TestCalculator(unittest.TestCase):
         #     # Test basic function
         #     fill in code
         ##########################
+=======
+    # def test_sqrt(self): # 3 assertions
+    #     # Test for invalid argument, example:
+    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
+    #     #    square_root(NUM)
+    #     # Test basic function
+    #     fill in code
+    ##########################
+>>>>>>> b765af7a0eefa5410b77e067c34c62a3f3a90165
     def test_hypotenuse(self):
         with self.assertRaises(ValueError):
             hypotenuse(0,0)
 
+<<<<<<< HEAD
     def test_multiply(self):
         assert mul(1,2) == 2
         assert mul(5,4) == 20
+=======
+    def test_multiply:
+        assert 1*2 == 2
+        assert 5*4 == 20
+
+    def test_divide:
+        assert -10/2 == -5
+        assert 15/3 == 3
+
+    def test_log_invalid_argument(self):
+        with self.assertRaises(ValueError):
+            logarithm(0, "hi")
+        assert hypotenuse(3,4) == 5
+        assert hypotenuse(0,0) == 0
+
+    def test_sqrt(self):
+        with self.assertRaises(ValueError):
+            square_root("abc")
+        assert spare_root(9) == 3
+        assert spare_root(16) == 4
+>>>>>>> b765af7a0eefa5410b77e067c34c62a3f3a90165
 
 
     def test_divide(self):
