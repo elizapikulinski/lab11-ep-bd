@@ -3,7 +3,7 @@
 # Partner 2: Briana DeStoppelaire
 import math
 
-def spare_root(a):
+def square_root(a):
     if a < 0:
         raise ValueError
     return math.squrt(a)
