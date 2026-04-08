@@ -6,72 +6,74 @@ from calculator import add, sub, div, log
 
 class TestCalculator(unittest.TestCase):
 #### Partner 2
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
+    def test_add(self):
+        assert add(2, 3) == 5
+        assert add(-1, 1) == 0
 
-def test_subtract():
-    assert sub(5, 3) == 2
-    assert sub(0, 4) == -4
+    def test_subtract(self):
+        assert sub(5, 3) == 2
+        assert sub(0, 4) == -4
 
-def test_divide_by_zero():
-    with pytest.raises(ZeroDivisionError):
-        div(0, 5)
+    def test_divide_by_zero(self):
+        with pytest.raises(ZeroDivisionError):
+            div(0, 5)
 
-def test_logarithm():
-    assert log(2, 8) == 3  # log base 2 of 8 = 3
+    def test_logarithm(self):
+        assert log(2, 8) == 3  # log base 2 of 8 = 3
 
-def test_log_invalid_base():
-    with pytest.raises(ValueError):
-        log(1, 10)  # base cannot be 1
-
-
+    def test_log_invalid_base(self):
+        with pytest.raises(ValueError):
+            log(1, 10)  # base cannot be 1
 
 
 
 
-    ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
-
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
-
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
-    ##########################
-def test_hypotenuse(self):
-    with self.assertRaises(ValueError):
-        hypotenuse(0,0)
-
-def test_multiply:
-    assert 1*2 == 2
-    assert 5*4 == 20
-
-def test_divide:
-    assert -10/2 == -5
-    assert 15/3 == 3
-
-def test_log_invalid_argument(self):
-    with self.assertRaises(ValueError):
-        logarithm(0, "hi")
-    assert hypotenuse(3,4) == 5
-    assert hypotenuse(0,0) == 0
-
-def test_sqrt(self):
-    with self.assertRaises(ValueError):
-        square_root("abc")
-    assert spare_root(9) == 3
-    assert spare_root(16) == 4
 
 
-# Do not touch this
+        ######## Partner 1
+        # def test_log_invalid_argument(self): # 1 assertion
+        #     # call log function inside, example:
+        #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
+        #     #     logarithm(0, 5)
+        #     fill in code
+
+        # def test_hypotenuse(self): # 3 assertions
+        #     fill in code
+
+        # def test_sqrt(self): # 3 assertions
+        #     # Test for invalid argument, example:
+        #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
+        #     #    square_root(NUM)
+        #     # Test basic function
+        #     fill in code
+        ##########################
+    def test_hypotenuse(self):
+        with self.assertRaises(ValueError):
+            hypotenuse(0,0)
+
+    def test_multiply(self):
+        assert mul(1,2) == 2
+        assert mul(5,4) == 20
+
+
+    def test_divide(self):
+        assert div(10,2) == 5
+        assert div(15,3) == 5
+
+    def test_log_invalid_argument(self):
+        with self.assertRaises(ValueError):
+            logarithm(0, "hi")
+        assert hypotenuse(3,4) == 5
+        assert hypotenuse(0,0) == 0
+
+    def test_sqrt(self):
+        with self.assertRaises(ValueError):
+            square_root("abc")
+        assert spare_root(9) == 3
+        assert spare_root(16) == 4
+        assert square_root(9) == exp(3)
+
+
+    # Do not touch this
 if __name__ == "__main__":
     unittest.main()
