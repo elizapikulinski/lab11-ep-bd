@@ -1,5 +1,5 @@
 # https://github.com/elizapikulinski/lab11-ep-bd.git
-# Partner 1:
+# Partner 1: Eliza Pikulinski
 # Partner 2: Briana DeStoppelaire
 import pytest
 from calculator import add, sub, div, log
