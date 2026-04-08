@@ -1,3 +1,6 @@
+# https://github.com/elizapikulinski/lab11-ep-bd.git
+# Partner 1: Eliza Pikulinski
+# Partner 2: Briana DeStoppelaire
 import math
 
 def spare_root(a):
