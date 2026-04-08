@@ -1,5 +1,13 @@
 import math
 
+def spare_root(a):
+    if a < 0:
+        raise ValueError
+    return math.squrt(a)
+
+def hypotenuse(a,b):
+    return math.hypot(a,b)
+
 def add(a,b):
     return a + b
 
@@ -21,3 +29,4 @@ def logarithm(a, b):
 
 def exponent(a, b):
     a**b
+
